@@ -23,7 +23,7 @@ def core_pods
     #pod 'Firebase/Messaging'
     #pod 'SwiftWebViewProgress'
     #pod 'FBAnnotationClusteringSwift', :git => 'https://github.com/ribl/FBAnnotationClusteringSwift.git'
-    pod 'GEOSwift', :git => 'https://github.com/mojtabacazi/GEOSwift.git', :branch => 'develop'
+    #pod 'GEOSwift', :git => 'https://github.com/mojtabacazi/GEOSwift.git', :branch => 'develop'
 
 end
 
