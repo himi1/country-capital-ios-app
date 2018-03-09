@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window?.tintColor = .themeColor
+        customizeNavigationBar()
         return true
     }
 
@@ -39,6 +41,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func customizeNavigationBar() {
+        // Customize navigation bar
+        let navAppearance = UINavigationBar.appearance()
+        
+        //To make navbar translucent
+        // navAppearance.setBackgroundImage(UIImage(), for: .default)
+        // navAppearance.shadowImage = UIImage()
+        navAppearance.barTintColor = .themeColor
+        //To make barButton and barItem text white
+        navAppearance.tintColor = .white
+        navAppearance.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
     }
 
 

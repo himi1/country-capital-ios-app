@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		328D2726204EFE8E0084B052 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328D2725204EFE8E0084B052 /* SearchTextField.swift */; };
 		328D2728204EFF350084B052 /* SearchCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328D2727204EFF350084B052 /* SearchCountryViewController.swift */; };
+		32B45DC020530B4C008F735B /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B45DBF20530B4C008F735B /* Util.swift */; };
+		32B45DC220530B59008F735B /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B45DC120530B59008F735B /* ColorTheme.swift */; };
+		32B45DC820531C2F008F735B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32B45DC720531C2F008F735B /* Assets.xcassets */; };
 		32BDE9892049F6B6007963BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BDE9882049F6B6007963BC /* AppDelegate.swift */; };
 		32BDE98B2049F6B6007963BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BDE98A2049F6B6007963BC /* ViewController.swift */; };
 		32BDE98E2049F6B6007963BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32BDE98C2049F6B6007963BC /* Main.storyboard */; };
@@ -296,6 +299,9 @@
 		328D2725204EFE8E0084B052 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		328D2727204EFF350084B052 /* SearchCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCountryViewController.swift; sourceTree = "<group>"; };
 		328D274A204F4E7A0084B052 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		32B45DBF20530B4C008F735B /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		32B45DC120530B59008F735B /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
+		32B45DC720531C2F008F735B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../Icons-generated/Assets.xcassets"; sourceTree = "<group>"; };
 		32BDE9852049F6B6007963BC /* test123.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test123.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BDE9882049F6B6007963BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32BDE98A2049F6B6007963BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -623,10 +629,13 @@
 		32BDE9872049F6B6007963BC /* test123 */ = {
 			isa = PBXGroup;
 			children = (
+				32B45DC720531C2F008F735B /* Assets.xcassets */,
 				328D2725204EFE8E0084B052 /* SearchTextField.swift */,
 				43986F812050F3AF00A87498 /* UIImage+Gif.swift */,
 				32BDE9BC204DF629007963BC /* FlagImages */,
 				32BDE9882049F6B6007963BC /* AppDelegate.swift */,
+				32B45DBF20530B4C008F735B /* Util.swift */,
+				32B45DC120530B59008F735B /* ColorTheme.swift */,
 				32BDE98A2049F6B6007963BC /* ViewController.swift */,
 				32BDE9BA204DDA0A007963BC /* DetailsViewController.swift */,
 				32BDE98C2049F6B6007963BC /* Main.storyboard */,
@@ -1085,6 +1094,7 @@
 				32BDEB71204DF6FC007963BC /* bmu.png in Resources */,
 				32BDEB0F204DF6FC007963BC /* isl.png in Resources */,
 				32BDEB85204DF6FC007963BC /* can.png in Resources */,
+				32B45DC820531C2F008F735B /* Assets.xcassets in Resources */,
 				32BDEB42204DF6FC007963BC /* mne.png in Resources */,
 				32BDEAD3204DF6FC007963BC /* tca.png in Resources */,
 				32BDEB2E204DF6FC007963BC /* zaf.png in Resources */,
@@ -1397,6 +1407,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				32BDE9B72049F6E3007963BC /* DAO.swift in Sources */,
+				32B45DC220530B59008F735B /* ColorTheme.swift in Sources */,
+				32B45DC020530B4C008F735B /* Util.swift in Sources */,
 				328D2728204EFF350084B052 /* SearchCountryViewController.swift in Sources */,
 				32BDE9B92049FB35007963BC /* SelectRegions.swift in Sources */,
 				32BDE98B2049F6B6007963BC /* ViewController.swift in Sources */,

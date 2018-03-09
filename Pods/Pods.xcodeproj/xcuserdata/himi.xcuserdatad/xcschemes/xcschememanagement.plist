@@ -14,12 +14,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-test123Tests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-test123UITests.xcscheme</key>
+		<key>geos.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

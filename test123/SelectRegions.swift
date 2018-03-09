@@ -10,11 +10,14 @@ import UIKit
 
 class SelectRegions: UITableViewController {
     
+    @IBOutlet weak var shuffleCountriesSwitch: UISwitch!
     override func viewDidLoad() {
         self.tableView.tableFooterView = UIView()
+        shuffleCountriesSwitch.onTintColor = .themeColor
+        shuffleCountriesSwitch.tintColor = .themeColor
     }
     
-    @IBAction func shuffleSwitch(_ sender: UISwitch) {
+    @IBAction func shuffleCountriesSwitchValueChanged(_ sender: UISwitch) {
         DAO.shuffleOn = sender.isOn
     }
     private enum RegionSection: Int {
@@ -23,7 +26,6 @@ class SelectRegions: UITableViewController {
         case asia
         case europe
         case oceania
-        case polar
         case others
         case shuffleCountries
         case searchCountry
@@ -46,9 +48,7 @@ class SelectRegions: UITableViewController {
             performSegue(withIdentifier: "detailsSegue", sender: (Any).self)
         case .oceania: DAO.regionSelected = "Oceania"
             performSegue(withIdentifier: "detailsSegue", sender: (Any).self)
-        case .polar: DAO.regionSelected = "Polar"
-            performSegue(withIdentifier: "detailsSegue", sender: (Any).self)
-        case .others: DAO.regionSelected = ""
+        case .others: DAO.regionSelected = "Others"
             performSegue(withIdentifier: "detailsSegue", sender: (Any).self)
         case .all: DAO.regionSelected = "All"
             performSegue(withIdentifier: "detailsSegue", sender: (Any).self)

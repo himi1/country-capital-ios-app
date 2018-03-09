@@ -13,6 +13,7 @@ class SearchCountryViewController: UIViewController {
     
     @IBOutlet weak var searchCountryTextField: SearchTextField!
     override func viewDidLoad() {
+        //self.view.backgroundColor = .black
         if DAO.searchCountryList.isEmpty {
             self.searchCountryTextField.filterItems([SearchTextFieldItem(title: "Loading...", subtitle: "Looking for countries", image: ZGIFImage.image(name: "loading-spinner.gif"))])
         DispatchQueue.global(qos: .background).async {

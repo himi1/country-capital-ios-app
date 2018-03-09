@@ -14,23 +14,28 @@ class DetailsViewController: UIViewController {
     var regionList: [[String]] = []
     var countryList: [String] = []
     
+    @IBOutlet weak var flagAndCountryView: UIView!
     @IBOutlet weak var flagImage: UIImageView!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var capitalLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //flagAndCountryView.frame.height = self.view.frame.height
         getRegionList()
         capitalLabel.isHidden = true
         if DAO.shuffleOn {
             regionList = regionList.shuffled()
         }
         
+        flagImage.layer.borderColor = UIColor.themeColor.cgColor
+        flagImage.layer.borderWidth = 1
+        
+        
         self.navigationItem.title = region
         //var regionList = DAO.countries[region]
         countryList = regionList[index]
         updateUI()
-        
     }
     
     func getRegionList() {
