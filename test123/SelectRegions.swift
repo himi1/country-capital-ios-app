@@ -10,6 +10,10 @@ import UIKit
 
 class SelectRegions: UITableViewController {
     
+    override func viewDidLoad() {
+        self.tableView.tableFooterView = UIView()
+    }
+    
     @IBAction func shuffleSwitch(_ sender: UISwitch) {
         DAO.shuffleOn = sender.isOn
     }
@@ -55,8 +59,6 @@ class SelectRegions: UITableViewController {
     }
     
     func searchCountry() {
-        performSegue(withIdentifier: "searchCountrySegue", sender: (Any).self)
-        
-        
+        performSegue(withIdentifier: "searchCountrySegue", sender: (Any).self)  
     }
 }

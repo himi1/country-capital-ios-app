@@ -26,7 +26,6 @@ class CustomTableViewCell: UITableViewCell {
        
         self.textLabel?.frame.origin.x = 60 // = CGRect(x: 60, y: self.frame.origin.y, width: self.frame.width - 45, height: self.frame.height)// (60, 0, self.frame.width - 45, 20)
         self.detailTextLabel?.frame.origin.x = 60 //ls = CGRect(x: 60, y: self.frame.origin.y, width: self.frame.width - 45, height: self.frame.height)
-        
     }
 }
 
@@ -458,7 +457,15 @@ open class SearchTextField: UITextField {
             return
         }
         
-        for i in 0 ..< filterDataSource.count {
+        //Added this himi to show loading text while the results are still loading
+        if filterDataSource.count == 1 && filterDataSource[0].title == "Loading..." {
+            let loadingItem = filterDataSource[0]
+            loadingItem.attributedTitle = NSMutableAttributedString(string: loadingItem.title)
+            loadingItem.attributedSubtitle = NSMutableAttributedString(string: (loadingItem.subtitle != nil ? loadingItem.subtitle! : ""))
+            filteredResults.append(loadingItem)
+        }
+        else {
+        for i in 0 ..< filterDataSource.count { //himi
             
             let item = filterDataSource[i]
             
@@ -499,6 +506,8 @@ open class SearchTextField: UITextField {
                     filteredResults.append(item)
                 }
             }
+            }
+            
         }
         
         tableView?.reloadData()

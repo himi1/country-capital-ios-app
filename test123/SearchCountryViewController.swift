@@ -10,20 +10,25 @@ import UIKit
 
 class SearchCountryViewController: UIViewController {
     var countryList: [[String]] = []
+    
     @IBOutlet weak var searchCountryTextField: SearchTextField!
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        for key in DAO.countries.keys {
-            countryList += DAO.countries[key]!
+        if DAO.searchCountryList.isEmpty {
+            self.searchCountryTextField.filterItems([SearchTextFieldItem(title: "Loading...", subtitle: "Looking for countries", image: ZGIFImage.image(name: "loading-spinner.gif"))])
+        DispatchQueue.global(qos: .background).async {
+            print("This is run on the background queue")
+            DAO.createSearchCountryList()
+            DispatchQueue.main.async {
+                print("This is run on the main queue, after the previous code in outer block")
+                self.searchCountryTextField.filterItems(DAO.searchCountryList)
+            }
         }
-        var countries: [SearchTextFieldItem] = []
-        
-        for each in countryList {
-            countries.append(SearchTextFieldItem(title: each[0], subtitle: each[1], image: UIImage(named: each[2])))
         }
-        
-            searchCountryTextField.filterItems(countries)
+            else {
+           //print(DAO.searchCountryList)
+            self.searchCountryTextField.filterItems(DAO.searchCountryList)
+        }
+
         // Do any additional setup after loading the view.
     }
 
